@@ -5,7 +5,7 @@ class CustomNetworkImage extends StatelessWidget {
     Key? key,
     @required this.image,
     @required this.image2,
-    this.placeholder = 'assets/images/image_placeholder.png',
+    this.placeholder = 'assets/images/img_placeholder.png',
   }) : super(key: key);
   final String? image;
   final String? image2;
@@ -16,6 +16,8 @@ class CustomNetworkImage extends StatelessWidget {
       child: FadeInImage.assetNetwork(
         placeholderFit: BoxFit.cover,
         placeholder: placeholder,
+        placeholderCacheWidth: 180,
+        placeholderCacheHeight: 180,
         image: image ?? '',
         fit: BoxFit.cover,
         imageErrorBuilder: (ctx, bbj, str) => FadeInImage.assetNetwork(
